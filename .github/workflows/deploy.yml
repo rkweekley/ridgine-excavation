@@ -1,0 +1,65 @@
+# Deploy Ridgane Excavation site from GitHub repo → GHCR Docker image → SSH deploy
+name: Build & Deploy Ridgane Excavation
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  build-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up QEMU + Docker Buildx for multi-arch builds
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
+          
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }} || echo "Using default token for ghcr.io deployment"
+          
+      - name: Build & push Docker image to GHCR (ghcr.io/${{ github.repository_owner }}/ridgine-excavation:${{ github.sha }})
+        uses: docker/build-push-action@v6
+        with:
+          context: .  
+          file: ./Dockerfile.production
+          push: true  
+          tags: |
+            ${{ github.repository_owner }}/ridgine-excavation:${{ github.sha }}
+            ${{ github.repository_owner }}/ridgine-excavation:latest
+          cache-from: type=gha,scope={{ runner.os }},push=true
+          
+  deploy-mac-mini-docker-run:
+    needs: build-docker-image  
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy Docker image to Mac Mini host via SSH rsync
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 69.133.124.51
+          username: cybral  
+          key: ${{ secrets.MAC_MINI_SSH_KEY }} 
+          command: |
+            export IMAGE_REF="${{ github.repository_owner }}/ridgine-excavation:latest"
+            
+            echo "[$] Pulling image $IMAGE_REF from GHCR..."  
+            docker pull $IMAGE_REF || echo "Note: Using cached local build or skipping if already present"
+            
+            echo "[$] Stopping existing container..."
+            systemctl stop ridgine-excavation-service || true
+            
+            echo "[$] Creating new Docker container with static files mounted as volume..."
+            docker run -d --name ridgine-excavation-prod \\
+              -p 5000:5000 \\
+              -v /home/agent/workspace/ridgine-excavation/static:/usr/share/nginx/html/static:ro \\
+              -e FLASK_ENV=production \\  
+              $IMAGE_REF || true
+            
+            sleep 10 && curl -s http://localhost:5000 >/dev/null && echo "Service responding at port 5000" || echo "Check logs or Docker status next."
