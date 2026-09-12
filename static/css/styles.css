@@ -1,0 +1,10 @@
+/* RIDGANE — Professional lime branding */
+:root { primary_lime: #D4FF00 }
+body { font-family: system-ui, -apple-system; background: #1a1a1a; color: #eee; margin: 0; }
+header { text-align: center; padding: 2rem;}
+h1 { color: primary_lime; font-size: 2.5rem; margin-bottom: .5rem; }
+main { max-width: 800px; margin: auto;}
+.service { margin: 1rem 0; background: #333; padding: 2rem;}
+h3 { color: primary_lime; }
+footer { text-align: center; padding: 2rem}
+@media (max-width: 640px) { h1 { font-size: 1.8rem}; .service { padding: .5rem }}

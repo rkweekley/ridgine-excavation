@@ -1,0 +1,24 @@
+FROM python:3.11-slim as builder
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt && rm -rf /var/lib/apt/lists/*
+
+FROM python:3.11-slim
+WORKDIR /app
+
+# Create non-root user (security best practice)
+RUN groupadd -r appuser && useradd -g appuser -m -d /app appuser
+COPY --from=builder /usr/local/lib/python* /usr/local/lib/python*
+COPY --from=builder /usr/bin/pip-3.*/bin/pip /usr/bin/pip
+COPY --from=builder /usr/local/bin/* /usr/local/bin/
+
+USER appuser
+
+# Copy static site files (mounted as volume if needed)
+COPY index.html .
+COPY css/ ./css/
+COPY js/ ./js/
+
+EXPOSE 5000
+CMD ["streaming-http-server", "--port", "5000"]
