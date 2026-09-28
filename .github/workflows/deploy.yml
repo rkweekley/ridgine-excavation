@@ -58,7 +58,6 @@ jobs:
           host: ${{ secrets.MAC_MINI_HOST }}
           username: ${{ secrets.DEPLOY_USER_PROD }}
           key: ${{ secrets.DEPLOY_SSH_KEY_PROD }}
-          script_stop: true
           script: |
             # macOS non-interactive SSH does not inherit the interactive PATH
             export PATH="/usr/local/bin:$PATH"
