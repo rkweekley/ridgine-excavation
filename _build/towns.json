@@ -1,0 +1,92 @@
+{
+  "Marietta, OH": {
+    "lat": 39.4168,
+    "lon": -81.4548,
+    "county": "Ohio",
+    "display": "Marietta, Washington County, Ohio, 45750, United States"
+  },
+  "Parkersburg, WV": {
+    "lat": 39.2667,
+    "lon": -81.5621,
+    "county": "West Virginia",
+    "display": "Parkersburg, Wood County, West Virginia, United States"
+  },
+  "Belpre, OH": {
+    "lat": 39.2773,
+    "lon": -81.5758,
+    "county": "Ohio",
+    "display": "Belpre, Washington County, Ohio, United States"
+  },
+  "Beverly, OH": {
+    "lat": 39.548,
+    "lon": -81.6394,
+    "county": "Washington County",
+    "display": "Beverly, Waterford Township, Washington County, Ohio, United States"
+  },
+  "Lowell, OH": {
+    "lat": 39.5298,
+    "lon": -81.5062,
+    "county": "Washington County",
+    "display": "Lowell, Adams Township, Washington County, Ohio, United States"
+  },
+  "Waterford, OH": {
+    "lat": 39.5423,
+    "lon": -81.6399,
+    "county": "Washington County",
+    "display": "Waterford, Waterford Township, Washington County, Ohio, 45785, United States"
+  },
+  "New Matamoras, OH": {
+    "lat": 39.5226,
+    "lon": -81.0642,
+    "county": "Washington County",
+    "display": "New Matamoras, Grandview Township, Washington County, Ohio, United States"
+  },
+  "Caldwell, OH": {
+    "lat": 39.7479,
+    "lon": -81.5165,
+    "county": "Noble County",
+    "display": "Caldwell, Olive Township, Noble County, Ohio, 43724, United States"
+  },
+  "Woodsfield, OH": {
+    "lat": 39.7626,
+    "lon": -81.1154,
+    "county": "Monroe County",
+    "display": "Woodsfield, Center Township, Monroe County, Ohio, 33793, United States"
+  },
+  "McConnelsville, OH": {
+    "lat": 39.6488,
+    "lon": -81.8534,
+    "county": "Morgan County",
+    "display": "McConnelsville, Morgan Township, Morgan County, Ohio, United States"
+  },
+  "Athens, OH": {
+    "lat": 39.3576,
+    "lon": -82.061,
+    "county": "United States",
+    "display": "Athens County, Ohio, United States"
+  },
+  "Vienna, WV": {
+    "lat": 39.3209,
+    "lon": -81.5513,
+    "county": "West Virginia",
+    "display": "Vienna, Wood County, West Virginia, United States"
+  },
+  "Williamstown, WV": {
+    "lat": 39.4,
+    "lon": -81.4489,
+    "county": "West Virginia",
+    "display": "Williamstown, Wood County, West Virginia, 26187, United States"
+  },
+  "Sistersville, WV": {
+    "lat": 39.5642,
+    "lon": -80.9959,
+    "county": "West Virginia",
+    "display": "Sistersville, Tyler County, West Virginia, United States"
+  },
+  "St. Marys, WV": {
+    "lat": 39.3917,
+    "lon": -81.2051,
+    "county": "West Virginia",
+    "display": "St. Marys, Pleasants County, West Virginia, 26170, United States"
+  }
+}
