@@ -300,12 +300,17 @@ def footer():
 """
 
 
+def biz_node():
+    """The LocalBusiness node. Emitted on EVERY page under a stable @id so the
+    entity (name, phone, address, geo) stays consistent site-wide."""
+    biz = dict(BIZ)
+    biz["areaServed"] = AREA_SERVED
+    return {"@context": "https://schema.org", **biz}
+
+
 def jsonld_scripts(kind, slug, service_name, fragment_html):
-    out = []
+    out = [biz_node()]
     if kind == "home":
-        biz = dict(BIZ)
-        biz["areaServed"] = AREA_SERVED
-        out.append({"@context": "https://schema.org", **biz})
         out.append({
             "@context": "https://schema.org",
             "@type": "WebSite",

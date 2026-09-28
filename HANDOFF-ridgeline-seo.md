@@ -58,10 +58,16 @@ Form endpoint checks: invalid POST → 400 with the right message; honeypot POST
 ### Deployment mechanics (for future edits)
 Working copy: `/home/agent/workspace/ridgeline-ohio` (fragment sources in `_build/bodies/`,
 assembler `_build/assemble.py`, validators `_build/verify_local.py`, `_build/verify_live.py`).
-Remote: `/Users/cyberal/docker/ridgine-excavation` on the Mac Mini
-(`sshpass -e ssh cyberal@69.133.124.51`, password auth).
-Rollback: previous source tree `ridgine-excavation.bak-20260928-1344`, previous image tagged
-`ridgine-excavation:prev-20260928`.
+Deploy source of truth: the public repo `rkweekley/ridgine-excavation` — push to `main` and
+GitHub Actions does the rest. The workflow builds a multi-arch image (linux/amd64 + linux/arm64,
+required for the Apple Silicon Mac), pushes `ghcr.io/rkweekley/ridgine-excavation:latest`, then SSHs
+to the Mac, pulls it and recreates the `ridgine-excavation` container on the `mac` network with the
+host-side env file. It health-gates through Nginx Proxy Manager and FAILS the job if the site does
+not answer 200 (the old workflow printed a green line over a dead site).
+Repo secrets: `MAC_MINI_HOST`, `DEPLOY_USER_PROD`, `DEPLOY_SSH_KEY_PROD`.
+Runtime secrets (Mailgun key) stay on the Mac at `/Users/cyberal/docker/ridgine-excavation/ridgine.env`
+— never in git or the image.
+Rollback: re-run any green workflow run from the Actions tab, or `docker run` the previous image tag.
 
 ---
 

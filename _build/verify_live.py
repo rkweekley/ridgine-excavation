@@ -8,8 +8,12 @@ SITE = "https://ridgelineexcavationohio.com"
 PATHS = [
     "/", "/service-areas.html", "/faq.html", "/site-prep.html", "/land-clearing.html",
     "/driveway-installation.html", "/drainage.html", "/trail-building.html", "/tree-removal.html",
+    "/gravel-pads.html", "/culverts-and-concrete.html", "/trenching-and-utilities.html",
+    "/ponds.html", "/atv-and-dirt-bike-tracks.html",
     "/excavation-marietta-oh.html", "/excavation-parkersburg-wv.html", "/excavation-belpre-oh.html",
     "/excavation-beverly-oh.html", "/excavation-caldwell-oh.html", "/excavation-athens-oh.html",
+    "/excavation-lowell-oh.html", "/excavation-vienna-wv.html", "/excavation-williamstown-wv.html",
+    "/excavation-cambridge-oh.html", "/excavation-woodsfield-oh.html", "/excavation-st-clairsville-oh.html",
     "/sitemap.xml", "/robots.txt", "/css/styles.css", "/js/main.js", "/images/hero.jpg",
 ]
 UA = "Mozilla/5.0 (compatible; site-verify/1.0)"
