@@ -1,0 +1,7 @@
+# Secrets live only on the host (Mac Mini), never in git or CI.
+ridgine.env
+*.env
+__pycache__/
+*.pyc
+*.bak-*
+.DS_Store

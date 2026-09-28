@@ -1,0 +1,10 @@
+# Secrets and build junk never enter the image.
+ridgine.env
+*.env
+__pycache__/
+*.pyc
+.github/
+_build/
+*.bak-*
+.DS_Store
+.git/
