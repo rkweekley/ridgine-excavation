@@ -4,6 +4,10 @@ name: Build & Deploy Ridgeline Excavation
 on:
   push:
     branches: [main]
+    # doc-only commits should not rebuild or bounce the live container
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
   workflow_dispatch: {}
 
 permissions:

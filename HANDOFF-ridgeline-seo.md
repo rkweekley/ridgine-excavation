@@ -1,7 +1,7 @@
 # Ridgeline Excavation LLC — local SEO fix: what was done, and what's left
 
 Site: https://ridgelineexcavationohio.com (served from the Mac Mini, container `ridgine-excavation`, via Nginx Proxy Manager)
-Company email of record: **ridgelinedig@gmail.com** · Phone: **740-629-7020**
+Company email of record: **ridgelinedig@gmail.com** · Phone: **740-629-7020** (confirmed live by Ryan 2026-09-28; the old line 740-761-4344 is retired)
 Date: 2026-09-28
 
 ---
@@ -87,8 +87,9 @@ support it — the Local Pack is driven by the Business Profile.
    - Primary category: **Excavating contractor**
    - Secondary: Land clearing service · Site preparation contractor · Drainage service · Tree service · Paving contractor
    - Website: `https://ridgelineexcavationohio.com`
-   - Phone: **confirm which line is live** — the site publishes 740-629-7020; the old site and (probably) the
-     profile carry 740-761-4344. Google will match the profile to whatever the site prints, so they must agree.
+   - Phone: **740-629-7020** — confirmed live 2026-09-28. The site prints it on all 26 pages, in the `tel:`
+     links and in the schema, so the profile MUST match it. If the profile still shows 740-761-4344, change it
+     first: the pack shows the profile's number and it will not match the website until it is fixed.
    - Address: `1495 Weppler Road, Lowell, OH 45744` (published on the old site, so it is already public). A
      service-area business can hide the address from the profile, but the postcard/video verification needs it.
    - Service area: a 75-mile radius of Lowell — Washington, Athens, Guernsey, Noble, Monroe, Morgan, Belmont
@@ -145,9 +146,14 @@ support it — the Local Pack is driven by the Business Profile.
    A straight 301 loses the "River Valley Excavation" keyword entirely, so if the client still gets work under
    that name, keep a single page on the new domain explaining the name change and 301 only the old *service
    and town* URLs to their new equivalents.
-4. **Which phone number is live — 740-629-7020 or 740-761-4344?** The site prints 629-7020 site-wide and the
-   form's mail goes to the Gmail; the old site prints 761-4344. One number must be the single NAP on the site,
-   the profile and every citation. Tell me which and I will make the site and schema match.
+4. ~~Which phone number is live~~ — **resolved 2026-09-28: 740-629-7020.** No site change was needed — all
+   26 pages, the `tel:` links and the JSON-LD already use it. Consequences to chase down:
+   - The Google Business Profile must be updated to 740-629-7020 if it still lists 740-761-4344 (the pack
+     shows the profile's number, and a mismatch breaks the local citation set).
+   - `digrivervalley.com` still prints 740-761-4344, so it is advertising a retired line. Another reason to
+     301 it or strip its contact block.
+   - Citations built from the old site (directories, Facebook, any printed material) advertise 761-4344 and
+     need correcting to 629-7020 as they are found.
 5. **Real project photos.** The portfolio block now honestly reads "Typical Projects We Take On" and uses
    stock imagery. The owner has real photos on the old site (and, from the old gallery, real project
    names like a Reno shed pad). Send them and they replace the stock images — with the owner's OK to publish.
