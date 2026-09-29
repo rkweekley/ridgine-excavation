@@ -78,7 +78,10 @@ for slug in ALL:
         "no_wy_domain": "ridgelineexcavation.com" not in html.replace("ridgelineexcavationohio.com", ""),
         "no_false_experience": not re.search(r"15\+ ?years|300\+ ?projects|est\.? ?20\d\d|decades of", html, re.I),
         "no_ryan": not re.search(r"\bRyan\b", html),
-        "address": "1495 Weppler Road" in html[html.find("<footer"):],
+        "no_borrowed_identity": not re.search(
+            r"1495 Weppler|rivervalleyexcavation|profile\.php\?id=61583438379745|google\.com/maps", html
+        ),
+        "footer_place": "Lowell, Ohio" in html[html.find("<footer"):],
         "jsonld": html.count("application/ld+json") >= 1,
         "nav": 'class="nav links"' in html or 'id="navLinks"' in html,
         "footer_nap": "740-629-7020" in html[html.find("<footer"):] if "<footer" in html else False,

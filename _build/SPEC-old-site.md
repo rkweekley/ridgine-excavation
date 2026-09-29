@@ -1,9 +1,16 @@
 # Ridgeline Excavation — facts recovered from the client's previous site (digrivervalley.com)
 
-Source: the owner's own site for the same business, previously trading as **River Valley Excavation**
-(digrivervalley.com). Everything below is the client's own published information, safe to reuse.
-The Ridgeline site (ridgelineexcavationohio.com) is the current build; these facts replace the
-invented ones that were in the old Ridgeline build.
+Source: digrivervalley.com — the previous site for this business, which traded as **River Valley Excavation**.
+That domain/site has since been **SOLD to another person**, so it is now a third party's property.
+
+WHAT MAY BE REUSED FROM IT: **business facts only** — the services the business offers, the service area,
+and operating practices (24/7, free written estimates, 811 locates, payment methods, insurance).
+WHAT MUST NOT BE REUSED: anything that identifies the business online — its published street address,
+postal code, geo coordinates, Facebook/Instagram pages, Google Maps listing, its founding year, and every
+photo and sentence of its copy. Do not quote it, do not link it, do not 301 it, do not reproduce its
+photos. Always write original copy (a verbatim-sentence check against it returns 0 overlaps today — keep
+it that way).
+The Ridgeline site (ridgelineexcavationohio.com) is the current build.
 
 ## Company facts (authoritative — use these, not the old invented ones)
 
@@ -12,12 +19,13 @@ invented ones that were in the old Ridgeline build.
   Ryan Zide; that copy is STALE — the current owner is TJ Flowers. Never write "Ryan Zide" or "Ryan".)
 - Founded **2025**; locally owned and operated.
 - Home base: **Lowell, Ohio** (Washington County), serving a **75-mile radius**.
-- Published address: **1495 Weppler Road, Lowell, OH 45744** (map coords 39.5646, -81.5584)
+- DO NOT PUBLISH: "1495 Weppler Road, Lowell, OH 45744" / coords 39.5646, -81.5584 (the sold site's address).
+  The site publishes town-level NAP only until the client supplies their own.
 - Phone (old site): (740) 761-4344 — call/text 24/7. New site currently shows 740-629-7020.
   **Do not add the old number to pages — pending confirmation of which line is live.**
 - Email of record: **ridgelinedig@gmail.com**
-- Existing profiles: Facebook, Instagram (@rivervalleyexcavation), Google Business Profile
-  ("River Valley Excavation", Lowell OH).
+- DO NOT LINK: the old Facebook page, @rivervalleyexcavation, and the "River Valley Excavation" Maps listing.
+  None are confirmed to be the client's after the sale; ask for their own pages instead.
 
 ## TRUE claims you may make (these all come from the client's own site)
 

@@ -35,21 +35,15 @@ BIZ = {
         "site preparation, land clearing, driveway installation, drainage, trail building, "
         "and tree removal in southeast Ohio and Wood, Tyler and Pleasants counties, West Virginia."
     ),
+    # Town level only. No street address, postal code, geo or founding year is published
+    # until the client confirms them: the address and profiles on digrivervalley.com belong
+    # to a site that was sold to another person, so they are NOT safe to reuse.
     "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1495 Weppler Road",
         "addressLocality": "Lowell",
         "addressRegion": "OH",
-        "postalCode": "45744",
         "addressCountry": "US",
     },
-    "geo": {"@type": "GeoCoordinates", "latitude": 39.5646, "longitude": -81.5584},
-    "foundingDate": "2025",
-    "sameAs": [
-        "https://www.facebook.com/profile.php?id=61583438379745",
-        "https://www.instagram.com/rivervalleyexcavation/",
-        "https://www.google.com/maps/place/River+Valley+Excavation/@39.5646497,-81.5583975,786m",
-    ],
     "knowsAbout": [
         "site preparation", "land clearing", "excavation", "grading",
         "driveway installation", "driveway regrading", "gravel pads",
@@ -282,14 +276,8 @@ def footer():
       <ul>
         <li><a href="tel:7406297020">740-629-7020</a> — call or text 24/7</li>
         <li><a href="mailto:ridgelinedig@gmail.com">ridgelinedig@gmail.com</a></li>
-        <li>1495 Weppler Road, Lowell, OH 45744</li>
-        <li>Serving a 75-mile radius of the Mid-Ohio Valley, OH &amp; WV</li>
+        <li>Based in Lowell, Ohio — serving a 75-mile radius of the Mid-Ohio Valley, OH &amp; WV</li>
         <li><a href="/faq.html">FAQ</a> · <a href="/service-areas.html">Service areas</a></li>
-        <li class="footer-social">
-          <a href="https://www.facebook.com/profile.php?id=61583438379745" rel="me noopener" target="_blank">Facebook</a> ·
-          <a href="https://www.instagram.com/rivervalleyexcavation/" rel="me noopener" target="_blank">Instagram</a> ·
-          <a href="https://www.google.com/maps/place/River+Valley+Excavation/@39.5646497,-81.5583975,786m" rel="me noopener" target="_blank">Google</a>
-        </li>
       </ul>
     </div>
   </div>
@@ -368,7 +356,7 @@ def head(slug, title, desc):
 <link rel="canonical" href="{url}">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="geo.region" content="US-OH">
-<meta name="geo.placename" content="Marietta, Ohio">
+<meta name="geo.placename" content="Lowell, Ohio">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ridgeline Excavation LLC">
 <meta property="og:title" content="{title}">
